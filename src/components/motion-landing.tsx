@@ -199,11 +199,17 @@ export function MotionLanding({ consulted }: { consulted?: string }) {
               "/optimized/giao_com_1.webp",
               "/optimized/giao_com_2.webp",
               "/optimized/giao_com_3.webp",
+            ].map((src, idx) => (
+              <div key={`giao-${idx}`} className="relative aspect-[3/4] overflow-hidden rounded-lg bg-slate-200 shadow-sm">
+                <Image src={src} alt="Giao cơm văn phòng" fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="object-cover transition-transform duration-500 hover:scale-105" />
+              </div>
+            ))}
+            {[
               "/optimized/menu_man_2.webp",
               "/optimized/menu_man_3.webp"
             ].map((src, idx) => (
-              <div key={idx} className="relative aspect-[4/3] overflow-hidden rounded-lg bg-slate-200 shadow-sm">
-                <Image src={src} alt="Giao cơm văn phòng" fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="object-cover transition-transform duration-500 hover:scale-105" />
+              <div key={`mon-${idx}`} className="relative aspect-[4/3] overflow-hidden rounded-lg bg-slate-200 shadow-sm">
+                <Image src={src} alt="Món ăn thực tế" fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="object-cover transition-transform duration-500 hover:scale-105" />
               </div>
             ))}
           </div>
