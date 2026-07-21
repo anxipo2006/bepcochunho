@@ -104,8 +104,8 @@ export async function closeInvoicesAction(formData: FormData) {
   await requireAdmin();
   const billingMonth = billingMonthSchema.parse(String(formData.get("billingMonth") || billingMonthFromDate()));
   const [month, year] = billingMonth.split("-").map(Number);
-  const from = new Date(year, month - 1, 1);
-  const to = new Date(year, month, 1);
+  const from = new Date(Date.UTC(year, month - 1, 1));
+  const to = new Date(Date.UTC(year, month, 1));
 
   const users = await prisma.user.findMany({
     where: { role: Role.CLIENT },

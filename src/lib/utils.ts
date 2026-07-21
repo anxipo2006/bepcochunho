@@ -21,5 +21,5 @@ export function formatDate(value: Date | string) {
 }
 
 export function billingMonthFromDate(date = new Date()) {
-  return `${String(date.getMonth() + 1).padStart(2, "0")}-${date.getFullYear()}`;
+  return `${String(date.getUTCMonth() + 1).padStart(2, "0")}-${date.getUTCFullYear()}`;
 }

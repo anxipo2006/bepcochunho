@@ -40,7 +40,9 @@ export function assertSameOrigin() {
   const origin = headerStore.get("origin");
   const host = headerStore.get("host");
 
-  if (!origin || !host || new URL(origin).host !== host) {
+  // Only enforce when origin is present (browser requests).
+  // Server-to-server or older clients may omit origin.
+  if (origin && host && new URL(origin).host !== host) {
     throw new Error("Invalid request origin");
   }
 }

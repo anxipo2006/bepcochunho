@@ -9,7 +9,15 @@ import { prisma } from "@/lib/prisma";
 import { assertSameOrigin, sanitizeText } from "@/lib/security";
 
 const orderSchema = z.object({
-  deliveryDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+  deliveryDate: z
+    .string()
+    .regex(/^\d{4}-\d{2}-\d{2}$/)
+    .refine((val) => {
+      const date = new Date(val + "T00:00:00Z");
+      const today = new Date();
+      today.setUTCHours(0, 0, 0, 0);
+      return date >= today;
+    }, "Ngày giao không thể là ngày trong quá khứ"),
   orderNote: z.string().max(500).optional().transform((value) => value ? sanitizeText(value, 500) : ""),
 });
 

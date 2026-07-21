@@ -16,8 +16,28 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Bếp Cô Chủ Nhỏ",
-  description: "Giải pháp suất ăn doanh nghiệp tận tâm và chuyên nghiệp tại TP.HCM.",
+  title: {
+    default: "Bếp Cô Chủ Nhỏ — Suất Ăn Doanh Nghiệp TP.HCM",
+    template: "%s | Bếp Cô Chủ Nhỏ",
+  },
+  description:
+    "Cung cấp suất ăn doanh nghiệp chuyên nghiệp tại TP.HCM. Giá từ 35.000đ/phần, freeship, menu đa dạng, hỗ trợ hóa đơn VAT và công nợ.",
+  keywords: [
+    "suất ăn doanh nghiệp",
+    "cơm văn phòng",
+    "bếp cô chủ nhỏ",
+    "cơm văn phòng TP.HCM",
+    "catering doanh nghiệp",
+    "suất ăn khu công nghiệp",
+  ],
+  openGraph: {
+    title: "Bếp Cô Chủ Nhỏ — Suất Ăn Doanh Nghiệp TP.HCM",
+    description:
+      "Cung cấp suất ăn doanh nghiệp chuyên nghiệp tại TP.HCM. Giá từ 35.000đ/phần, freeship, menu đa dạng, hỗ trợ hóa đơn VAT và công nợ.",
+    locale: "vi_VN",
+    type: "website",
+  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({
