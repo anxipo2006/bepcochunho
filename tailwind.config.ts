@@ -13,7 +13,17 @@ const config: Config = {
         teal: {
           DEFAULT: "#10b8c2",
         },
-        offwhite: "#f8fafc",
+        "bep-orange": {
+          DEFAULT: "#FF5A36",
+          dark: "#E04828",
+          soft: "#FFF3F0",
+        },
+        "fresh-teal": {
+          DEFAULT: "#00B4D8",
+          dark: "#0096B4",
+          soft: "#E5F7FB",
+        },
+        offwhite: "#FAFAFA",
       },
       fontFamily: {
         sans: ["var(--font-be-vietnam-pro)", "ui-sans-serif", "system-ui"],
