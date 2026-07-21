@@ -47,7 +47,7 @@ const values = [
 const menuHighlights = [
   {
     title: "Cơm mặn đưa cơm",
-    image: "/optimized/3.webp",
+    image: "/optimized/menu_man_1.webp",
     text: "Sườn nướng mật ong, đùi gà sốt mắm tỏi, thịt kho trứng cút, cá chiên giòn, xíu mại sốt cà.",
   },
   {
@@ -57,12 +57,12 @@ const menuHighlights = [
   },
   {
     title: "Menu chay thanh tịnh",
-    image: "/optimized/6.webp",
+    image: "/optimized/menu_chay.webp",
     text: "Đậu hũ kho sả, nấm đùi gà kho tiêu, sườn non chay rim và rau củ xào đủ dinh dưỡng.",
   },
   {
     title: "Đồ uống và tráng miệng",
-    image: "/optimized/tm.webp",
+    image: "/optimized/menu_trang_mieng.webp",
     text: "Nước sâm, hạt chia, sữa chua nhà làm và trái cây tươi theo mùa.",
   },
 ];
@@ -185,6 +185,42 @@ export function MotionLanding({ consulted }: { consulted?: string }) {
                 <p className="mt-2 text-sm leading-6 text-slate-600">{text}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="thu-vien" className="bg-slate-50 py-12 lg:py-14">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Badge tone="coral">Hoạt động thực tế</Badge>
+          <h2 className="mt-4 text-2xl font-bold leading-tight text-slate-950 sm:text-3xl">Những suất cơm nóng hổi giao tận tay doanh nghiệp</h2>
+          
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              "/optimized/giao_com_1.webp",
+              "/optimized/giao_com_2.webp",
+              "/optimized/giao_com_3.webp",
+              "/optimized/menu_man_2.webp",
+              "/optimized/menu_man_3.webp"
+            ].map((src, idx) => (
+              <div key={idx} className="relative aspect-[4/3] overflow-hidden rounded-lg bg-slate-200 shadow-sm">
+                <Image src={src} alt="Giao cơm văn phòng" fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="object-cover transition-transform duration-500 hover:scale-105" />
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12">
+            <h3 className="mb-6 text-xl font-bold text-slate-900">Video thực tế các món ăn</h3>
+            <div className="grid gap-4 sm:grid-cols-3">
+              {[
+                "/videos/video_1.mov",
+                "/videos/video_2.mov",
+                "/videos/video_3.mov"
+              ].map((src, idx) => (
+                <div key={idx} className="relative aspect-[9/16] overflow-hidden rounded-lg bg-slate-950 shadow-md">
+                  <video src={src} autoPlay muted loop playsInline className="h-full w-full object-cover opacity-90" />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
