@@ -47,22 +47,22 @@ const values = [
 const menuHighlights = [
   {
     title: "Cơm mặn đưa cơm",
-    image: "/optimized/menu_1.webp",
+    image: "/optimized/3.webp",
     text: "Sườn nướng mật ong, đùi gà sốt mắm tỏi, thịt kho trứng cút, cá chiên giòn, xíu mại sốt cà.",
   },
   {
     title: "Ngày đổi vị",
-    image: "/optimized/menu_2.webp",
+    image: "/optimized/14.webp",
     text: "Bún bò, hủ tiếu tôm thịt, mì Quảng, phở gà với nước lèo hầm xương thanh ngọt.",
   },
   {
     title: "Menu chay thanh tịnh",
-    image: "/optimized/menu_3.webp",
+    image: "/optimized/6.webp",
     text: "Đậu hũ kho sả, nấm đùi gà kho tiêu, sườn non chay rim và rau củ xào đủ dinh dưỡng.",
   },
   {
     title: "Đồ uống và tráng miệng",
-    image: "/optimized/menu_4.webp",
+    image: "/optimized/tm.webp",
     text: "Nước sâm, hạt chia, sữa chua nhà làm và trái cây tươi theo mùa.",
   },
 ];
